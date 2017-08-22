@@ -75,42 +75,60 @@
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-    <div class="navbar-header">
+  <div class="row">
+    <div class="col-xs-12 hidden-xs">              
+      <div class="call-us">
+        <ul>
+          <li>
+            <img src="/sites/all/themes/go_city/images/phone.png" alt="">
+            <span class="transport">CALL US NOW FOR <br> YOUR TRANSPORT</span>
+          </li>
+          <li>
+            <a href="tel:5917890123">591 7890 123</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
       <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Go City Montevideo'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Go City Montevideo'); ?>" />
         </a>
-      <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
-
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <?php endif; ?>
+        <?php endif; ?>
     </div>
 
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
+
+      <div class="navbar-header">
+        <?php if (!empty($site_name)): ?>
+          <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+        <?php endif; ?>
+
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <?php endif; ?>
       </div>
-    <?php endif; ?>
+
+      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+        <div class="navbar-collapse collapse" id="navbar-collapse">
+          <nav role="navigation">
+            <?php if (!empty($primary_nav)): ?>
+              <?php print render($primary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($secondary_nav)): ?>
+              <?php print render($secondary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($page['navigation'])): ?>
+              <?php print render($page['navigation']); ?>
+            <?php endif; ?>
+          </nav>
+        </div>
+      <?php endif; ?>
+    </div>
   </div>
 </header>
 
