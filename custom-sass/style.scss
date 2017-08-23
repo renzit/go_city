@@ -4,8 +4,144 @@
 *   Custom Overrides 
 */
 
-$navbar-default-border:           none;
+$navbar-default-border:             none;
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                #fff !default;
 
+
+
+//Navbar scss
 .logged-in{
     padding-top:50px !important;
+}
+
+.call-us{
+    float:right;
+    ul{
+        list-style-type: none;
+        line-height: 1.3;
+        padding-top: 25px;
+        li{
+            display: inline-block;
+            font-family: karla;
+            font-weight: bold;
+            padding: 0 1px;
+            vertical-align: top;
+            position: relative;
+            a{
+                font-size: 30px;
+                color: #2c3740;
+                line-height: 1;
+                transition: 1s all ease;
+                -webkit-transition: 1s all ease;
+            }
+        }
+        li:first-child:after {
+            content: "";
+            background: #d5dce4;
+            display: block;
+            position: absolute;
+            right: -15px;
+            top: 0;
+            width: 1px;
+            height: 30px;
+        }
+        li:last-child {
+            padding: 0 25px !important;
+        }
+    }
+    img{
+        margin-right: 12px;
+        vertical-align: top;
+        float: left;
+    }
+}
+
+.transport-page-layout .transport {
+    font-size: 12px;
+}
+
+.transport {
+    float: right;
+    font-weight: bold;
+    font-size: 11px;
+    color: #2c3740;
+}
+
+//Logo Section
+.logo{
+    margin-top:-35px;
+}
+
+//List menu links
+.navbar-right{
+    background: #314555;
+    position: relative;
+    margin-right: 27px;
+    padding-left: 38px;
+    width: 830px;
+    margin-top: 24px;
+    font-size: 0;
+    li{
+        
+    }
+}
+
+.nav:before {
+    border-left: 19px solid #ffffff;
+    border-right: 19px solid transparent;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid transparent;
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+#go-city-menu li {
+    padding-right: 0;
+    a{
+        -webkit-transition: color .2s ease;
+        -moz-transition: color .2s ease;
+        -ms-transition: color .2s ease;
+        -o-transition: color .2s ease;
+        transition: color .2s ease;
+    }
+}
+
+#go-city-menu{
+    .navbar-right{
+        li{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-left: 1px solid #405667;
+            position: relative;
+            transition: 0.5s all ease;
+            -webkit-transition: 0.5s all ease;
+            &:first-child:before {
+                border-left: 19px solid transparent;
+                border-right: 19px solid #314555;
+                border-top: 25px solid transparent;
+                border-bottom: 25px solid #314555;
+                content: "";
+                position: absolute;
+                left: -38px;
+                top: 0;
+                transition: 0.5s all ease;
+                -webkit-transition: 0.5s all ease;
+            }
+            a{
+                display: block;
+                padding: 16px 24px 14px 22px;
+                color: #fff !important;
+                transition: 1s all ease;
+                -webkit-transition: 1s all ease;
+                outline: none;
+                text-decoration: none;
+                font-weight: 800;
+                background-color:transparent;
+            }
+        }
+    }
 }
