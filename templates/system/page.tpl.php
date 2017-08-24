@@ -84,7 +84,7 @@
             <span class="transport">CALL US NOW FOR <br> YOUR TRANSPORT</span>
           </li>
           <li>
-            <a href="tel:5917890123">591 7890 123</a>
+            <a href="tel:+59894893823">(+598) 94 893 823</a>
           </li>
         </ul>
       </div>

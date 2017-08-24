@@ -9,6 +9,21 @@ $navbar-default-color:             #fff !default;
 $navbar-default-bg:                #fff !default;
 
 
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+a:hover, a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
 
 //Navbar scss
 .logged-in{
@@ -70,7 +85,7 @@ $navbar-default-bg:                #fff !default;
 
 //Logo Section
 .logo{
-    margin-top:-35px;
+    margin-top:-25px;
 }
 
 //List menu links
@@ -84,6 +99,17 @@ $navbar-default-bg:                #fff !default;
     font-size: 0;
     li{
         
+    }
+    &:after{
+        content: "";
+        background: #314555;
+        display: block;
+        width: 350%;
+        height: 100%;
+        right: -350%;
+        top: 0;
+        position: absolute;
+        clear:inherit;
     }
 }
 
@@ -131,6 +157,15 @@ $navbar-default-bg:                #fff !default;
                 transition: 0.5s all ease;
                 -webkit-transition: 0.5s all ease;
             }
+            &:first-child:hover:before{
+                border-left-color: transparent;
+                border-right-color: #2a3b48;
+                border-top-color: transparent;
+                border-bottom-color: #2a3b48;
+            }
+            &:hover{
+                background: #2a3b48;
+            }
             a{
                 display: block;
                 padding: 16px 24px 14px 22px;
@@ -141,6 +176,42 @@ $navbar-default-bg:                #fff !default;
                 text-decoration: none;
                 font-weight: 800;
                 background-color:transparent;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 1025px){
+    #go-city-menu{
+        .navbar-right {
+            width: auto;
+            a{
+                padding: 16px 11px 13px 11px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .transport-header-layout-one .call-us {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    #go-city-menu{
+        .navbar-right{
+            width: 106%;
+            padding-left: 39px;
+            margin-right: 0;
+            li{
+                font-size: 11px;
+                &:first-child:before {
+                    border-width: 24px 19px;
+                }
+                a{
+                    padding: 17px 11px !important;
+                }
             }
         }
     }
