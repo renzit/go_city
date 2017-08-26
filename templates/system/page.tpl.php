@@ -132,6 +132,10 @@
   </div>
 </header>
 
+<?php if (!empty($page['hero_slider'])): ?>
+  <?php print render($page['hero_slider']); ?>
+<?php endif; ?>
+
 <div class="main-container <?php print $container_class; ?>">
 
   <header role="banner" id="page-header">

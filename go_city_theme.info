@@ -10,6 +10,7 @@ base theme = bootstrap
 
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
+regions[hero_slider]    = 'Hero Slider'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'

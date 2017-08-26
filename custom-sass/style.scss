@@ -4,7 +4,7 @@
 *   Custom Overrides 
 */
 
-$navbar-default-border:             none;
+$navbar-default-border:             transparent;
 $navbar-default-color:             #fff !default;
 $navbar-default-bg:                #fff !default;
 
@@ -26,9 +26,7 @@ a:hover, a:focus {
 }
 
 //Navbar scss
-.logged-in{
-    padding-top:50px !important;
-}
+
 
 .call-us{
     float:right;
@@ -113,7 +111,14 @@ a:hover, a:focus {
     }
 }
 
-.nav:before {
+.navbar-default{
+    border-bottom:none;
+}
+.navbar{
+    margin-bottom:0;
+}
+
+#go-city-menu .nav:before {
     border-left: 19px solid #ffffff;
     border-right: 19px solid transparent;
     border-top: 25px solid #ffffff;
