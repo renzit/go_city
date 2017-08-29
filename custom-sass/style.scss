@@ -10,7 +10,7 @@ $navbar-default-bg:                #fff !default;
 
 
 img {
-    width: auto;
+    width: auto ;
     max-width: 100%;
     height: auto;
 }
@@ -220,4 +220,25 @@ a:hover, a:focus {
             }
         }
     }
+}
+
+//Services
+
+.services{
+    padding-top: 50px;
+}
+.service-text{
+    padding: 34px 23px 36px 34px;
+    box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
+    -webkit-box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
+    border: 1px solid #d4dee5;
+}
+
+.read-more {
+    text-transform: uppercase;
+    color: #2c3740;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    letter-spacing: 0.7px;
+    font-weight: 800;
 }

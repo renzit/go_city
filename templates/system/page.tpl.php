@@ -147,12 +147,36 @@
   </header> <!-- /#page-header -->
 
   <div class="row">
+    <?php print $messages; ?>
+    
+    <div class="services clearfix">
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['service_one'])): ?>
+          <?php print render($page['service_one']); ?>
+        <?php endif; ?>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['service_two'])): ?>
+          <?php print render($page['service_two']); ?>
+        <?php endif; ?>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['service_three'])): ?>
+          <?php print render($page['service_three']); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
+
+
 
     <section<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
@@ -165,7 +189,7 @@
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
+
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>
       <?php endif; ?>
