@@ -9,6 +9,7 @@ $navbar-default-color:             #fff !default;
 $navbar-default-bg:                #fff !default;
 
 
+//Comunes
 img {
     width: auto ;
     max-width: 100%;
@@ -26,6 +27,12 @@ a:hover, a:focus {
 }
 
 //Navbar scss
+
+
+//Admin menu hack
+html body.admin-menu {
+    margin-top: 53px !important;
+}
 
 
 .call-us{
@@ -82,9 +89,9 @@ a:hover, a:focus {
 }
 
 //Logo Section
-.logo{
-    margin-top:-25px;
-}
+// .logo{
+//     padding: 28px 0;
+// }
 
 //List menu links
 .navbar-right{
@@ -116,6 +123,10 @@ a:hover, a:focus {
 }
 .navbar{
     margin-bottom:0;
+}
+
+.navbar-toggle {
+    margin: 14px 0;
 }
 
 #go-city-menu .nav:before {
@@ -186,7 +197,82 @@ a:hover, a:focus {
     }
 }
 
+
+
+//Services
+
+.services{
+    padding-top: 50px;
+    img{
+        width: 100%;
+    }
+}
+.service-text{
+    padding: 34px 23px 36px 34px;
+    box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
+    -webkit-box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
+    border: 1px solid #d4dee5;
+}
+
+.service-heading{
+    h2{
+        margin-top:0px;
+        margin-bottom: 39px;
+        padding-bottom: 13px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-weight: 900;
+    }
+    span{
+        font-weight: bold;
+        font-size: 14px;
+        display: block;
+        color: #6d7c88;
+        text-transform: uppercase;
+        letter-spacing: -0.1px;
+    }
+}
+
+.read-more {
+    text-transform: uppercase;
+    color: #2c3740;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    letter-spacing: 0.7px;
+    font-weight: 800;
+}
+
+//utility
+.service-heading h2:after{
+    background-color: #50b9ce !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.service-heading h2:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+}
+
+@media (min-width: 1024px){
+    .logo{
+        position:relative;
+        top:20px;
+    }
+
+}
 @media only screen and (max-width: 1199px) and (min-width: 1025px){
+//Menu
     #go-city-menu{
         .navbar-right {
             width: auto;
@@ -197,13 +283,37 @@ a:hover, a:focus {
     }
 }
 
+//Fin Menu
+
 @media (max-width: 767px){
+//Menu
     .transport-header-layout-one .call-us {
         padding-top: 20px;
     }
+    .logo{
+        img{
+            width: 15.25rem;
+            padding: 0.5rem 0;
+            float: left;
+        }
+    }
+
+//Fin Menu
+
+//Services
+    .service-text {
+        padding: 25px 15px;
+    }
+    .card{
+        padding-bottom: 20px;
+    }
 }
 
+
+
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
+//Menu
     #go-city-menu{
         .navbar-right{
             width: 106%;
@@ -220,25 +330,5 @@ a:hover, a:focus {
             }
         }
     }
-}
-
-//Services
-
-.services{
-    padding-top: 50px;
-}
-.service-text{
-    padding: 34px 23px 36px 34px;
-    box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
-    -webkit-box-shadow: 0px 0 6px 2px rgba(212,222,229,0.4);
-    border: 1px solid #d4dee5;
-}
-
-.read-more {
-    text-transform: uppercase;
-    color: #2c3740;
-    transition: 0.5s all ease;
-    -webkit-transition: 0.5s all ease;
-    letter-spacing: 0.7px;
-    font-weight: 800;
+//Fin Menu
 }

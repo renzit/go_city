@@ -76,7 +76,14 @@
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
   <div class="row">
-    <div class="col-xs-12 hidden-xs">              
+    <div class="col-xs-6 col-sm-4 main-logo">
+      <?php if ($logo): ?>
+        <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Go City Montevideo'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Go City Montevideo'); ?>" />
+        </a>
+        <?php endif; ?>
+    </div>
+    <div class="col-xs-8 hidden-xs">              
       <div class="call-us">
         <ul>
           <li>
@@ -88,13 +95,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Go City Montevideo'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Go City Montevideo'); ?>" />
-        </a>
-        <?php endif; ?>
     </div>
 
 
@@ -150,6 +150,11 @@
     <?php print $messages; ?>
     
     <div class="services clearfix">
+      <div class="col-xs-12">
+        <div class="service-heading">
+        <span><?php print t('Our Services') ?></span>
+        <h2><?php print t('Transport & Travel') ?></h2>
+      </div>
       <div class="col-xs-12 col-sm-4">
         <?php if (!empty($page['service_one'])): ?>
           <?php print render($page['service_one']); ?>
