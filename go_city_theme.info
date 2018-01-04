@@ -57,3 +57,31 @@ scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
+
+
+; Layout: Front
+layouts[front][name] = "front"
+layouts[front][description] = "Front layout"
+layouts[front][template] = "templates/system/front"
+
+layouts[front][regions][]  = "navigation"
+layouts[front][regions][]  = "header"
+layouts[front][regions][]  = "hero_slider"
+layouts[front][regions][]  = "about_us_heading"
+layouts[front][regions][]  = "about_us_message"
+layouts[front][regions][]  = "service_heading"
+layouts[front][regions][]  = "service_one"
+layouts[front][regions][]  = "service_two"
+layouts[front][regions][]  = "service_three"
+layouts[front][regions][]  = "fleet_heading"
+layouts[front][regions][]  = "fleet_one"
+layouts[front][regions][]  = "fleet_two"
+layouts[front][regions][] = "fleet_three"
+layouts[front][regions][] = "highlighted"
+layouts[front][regions][] = "help"
+layouts[front][regions][] = "content"
+layouts[front][regions][] = "sidebar_first"
+layouts[front][regions][] = "sidebar_second"
+layouts[front][regions][] = "footer"
+layouts[front][regions][] = "page_top"
+layouts[front][regions][] = "page_bottom"
