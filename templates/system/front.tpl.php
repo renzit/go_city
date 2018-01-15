@@ -225,6 +225,26 @@
       </div>
     </div>
 
+    <div class="section-contact clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="heading">
+              <?php if (!empty($page['contact_heading'])): ?>
+              <?php print render($page['contact_heading']); ?>
+              <?php endif; ?>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <?php if (!empty($page['contact_block'])): ?>
+              <?php print render($page['contact_block']); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
 
         <?php if (!empty($page['sidebar_first'])): ?>

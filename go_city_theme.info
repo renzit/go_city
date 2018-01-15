@@ -22,6 +22,8 @@ regions[fleet_one]       = 'Fleet One'
 regions[fleet_two]       = 'Fleet Two'
 regions[fleet_three]     = 'Fleet Three'
 regions[highlighted]     = 'Highlighted'
+regions[contact_heading] = 'Contact Heading'
+regions[contact_block]   = 'Contact Block'
 regions[help]            = 'Help'
 regions[content]         = 'Content'
 regions[sidebar_first]   = 'Primary'
@@ -29,7 +31,7 @@ regions[sidebar_second]  = 'Secondary'
 regions[footer]          = 'Footer'
 regions[page_top]        = 'Page top'
 regions[page_bottom]     = 'Page bottom'
-
+layouts[front][regions][] = "contact_heading"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
@@ -78,6 +80,8 @@ layouts[front][regions][]  = "fleet_one"
 layouts[front][regions][]  = "fleet_two"
 layouts[front][regions][] = "fleet_three"
 layouts[front][regions][] = "highlighted"
+layouts[front][regions][] = "contact_heading"
+layouts[front][regions][] = "contact_block"
 layouts[front][regions][] = "help"
 layouts[front][regions][] = "content"
 layouts[front][regions][] = "sidebar_first"

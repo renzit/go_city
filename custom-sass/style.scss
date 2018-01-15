@@ -328,6 +328,20 @@ html body.admin-menu {
   }
 }
 
+.section-contact {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  background: url(../images/contact.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+#block-formblock-contact-site {
+  h2 {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1199px) and (min-width: 1025px) {
   //Menu
   #go-city-menu {
