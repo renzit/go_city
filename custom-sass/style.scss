@@ -1,4 +1,9 @@
 @import '../bootstrap-sass/bootstrap.scss';
+//#f69616 - 1er color
+//#E5D49A - 2do color
+//#345c96 - 3er color
+//#8CB9BC - 4to color
+//#5B5B48 - 5to color
 
 /*
 *   Custom Overrides
@@ -98,14 +103,15 @@ html body.admin-menu {
 
 @media only screen and (min-width: 768px) {
   .navbar-right {
-    background: #316188; //#314555;
+    background: #345c96; //#314555;
     position: relative;
     padding-left: 38px;
-    width: 50vw;
+    width: 58vw;
     margin-top: 24px;
+    margin-bottom: 1px;
     &:after {
       content: "";
-      background: #316188; //#314555;
+      background: #345c96; //#314555;
       display: block;
       width: 16px;
       height: 100%;
@@ -140,9 +146,9 @@ html body.admin-menu {
         border-left: 1px solid #1c4d75;
         &:first-child:before {
           border-left: 19px solid transparent;
-          border-right: 19px solid #316188;
+          border-right: 19px solid #345c96;
           border-top: 25px solid transparent;
-          border-bottom: 25px solid #316188;
+          border-bottom: 25px solid #345c96;
           content: "";
           position: absolute;
           left: -38px;
@@ -150,21 +156,27 @@ html body.admin-menu {
         }
         &:first-child:hover:before {
           border-left-color: transparent;
-          border-right-color: #316188; //#2a3b48;
+          border-right-color: #345c96; //#2a3b48;
           border-top-color: transparent;
-          border-bottom-color: #316188; //#2a3b48;
+          border-bottom-color: #345c96; //#2a3b48;
         }
         &:hover {
-          background: #316188; //#2a3b48;
+          background: #345c96; //#2a3b48;
+          a {
+            color: #FA8F1C !important;
+          }
         }
         a {
           display: block;
           padding: 16px 24px 14px 22px;
-          color: #fff !important;
+          color: #fff;
           outline: none;
           text-decoration: none;
-          font-weight: 800;
+          font-weight: 600;
           background-color: transparent;
+          font-size: 15px;
+          transition: color 0.2s linear;
+          &:hover {}
         }
       }
     }
@@ -334,6 +346,7 @@ html body.admin-menu {
   background: url(../images/contact.jpg) no-repeat center center;
   background-size: cover;
   color: white;
+  background-attachment: fixed;
 }
 
 #block-formblock-contact-site {
@@ -346,7 +359,7 @@ html body.admin-menu {
   //Menu
   #go-city-menu {
     .navbar-right {
-      width: 60vw;
+      width: 64vw;
       a {
         //padding: 16px 11px 13px 11px !important;
       }
@@ -378,13 +391,39 @@ html body.admin-menu {
   .card {
     padding-bottom: 20px;
   }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form,
+  #navbar {
+    padding: 0;
+  }
+  .navbar-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #FFF;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .15);
+  }
+  .navbar-default .navbar-nav>.active>a,
+  .navbar-default .navbar-nav>.active>a:hover,
+  .navbar-default .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: white;
+  }
+  .nav>li {
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+  .navbar-nav {
+    margin: 7.5px 0px 0;
+  }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   //Menu
   #go-city-menu {
     .navbar-right {
-      width: 55vw;
+      width: 68vw;
       padding-left: 39px;
       li {
         a {
