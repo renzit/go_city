@@ -172,6 +172,21 @@
               <?php print render($page['service_three']); ?>
               <?php endif; ?>
             </div>
+            <div class="col-xs-12 col-sm-4">
+              <?php if (!empty($page['service_four'])): ?>
+              <?php print render($page['service_four']); ?>
+              <?php endif; ?>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <?php if (!empty($page['service_five'])): ?>
+              <?php print render($page['service_five']); ?>
+              <?php endif; ?>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <?php if (!empty($page['service_six'])): ?>
+              <?php print render($page['service_six']); ?>
+              <?php endif; ?>
+            </div>
           </div>
         </div>
       </div>
