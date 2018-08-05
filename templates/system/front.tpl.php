@@ -192,6 +192,25 @@
       </div>
     </div>
 
+    <div class="section-reservation clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="heading">
+              <?php if (!empty($page['reservation_heading'])): ?>
+              <?php print render($page['reservation_heading']); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <?php if (!empty($page['reservation_form'])): ?>
+            <?php print render($page['reservation_form']); ?>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="section-about clearfix">
       <div class="container">
         <div class="row">
