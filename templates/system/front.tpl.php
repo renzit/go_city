@@ -83,7 +83,7 @@
         </a>
           <?php endif; ?>
         </div>
-        <div class="col-xs-8 hidden-xs">
+        <div class="col-xs-7 hidden-xs">
           <div class="call-us">
             <ul>
               <li>
@@ -93,8 +93,15 @@
               <li>
                 <a href="tel:+59894893823">(+598) 94 893 823</a>
               </li>
+
             </ul>
+
           </div>
+        </div>
+        <div class="col-xs-1">
+          <?php if (!empty($page['language_select'])): ?>
+            <?php print render($page['language_select']); ?>
+          <?php endif; ?>
         </div>
 
 
@@ -290,7 +297,7 @@
 
 
       <?php if (!empty($page['footer'])): ?>
-      <footer class="footer <?php print $container_class; ?>">
+      <footer class="footer">
         <?php print render($page['footer']); ?>
       </footer>
       <?php endif; ?>

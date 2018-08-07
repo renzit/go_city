@@ -9,6 +9,7 @@ base theme = bootstrap
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]      = 'Navigation'
+regions[language_select]      = 'Language Select'
 regions[header]          = 'Top Bar'
 regions[hero_slider]     = 'Hero Slider'
 regions[service_heading] = 'Service Header'
@@ -72,6 +73,7 @@ layouts[front][description] = "Front layout"
 layouts[front][template] = "templates/system/front"
 
 layouts[front][regions][]  = "navigation"
+layouts[front][regions][]  = "language_select"
 layouts[front][regions][]  = "header"
 layouts[front][regions][]  = "hero_slider"
 layouts[front][regions][]  = "service_heading"
