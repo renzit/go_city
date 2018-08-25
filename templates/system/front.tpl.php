@@ -83,12 +83,13 @@
         </a>
           <?php endif; ?>
         </div>
-        <div class="col-xs-7 hidden-xs">
+        <div class="col-xs-6 hidden-xs">
           <div class="call-us">
             <ul>
               <li>
-                <img src="/sites/all/themes/go_city/images/phone.png" alt="">
-                <span class="transport">CALL US NOW FOR <br> YOUR TRANSPORT</span>
+                <img class="icon-cellphone" src="/sites/all/themes/go_city/images/phone.png" alt="">
+                <span class="transport"><?php print t('CALL US NOW FOR'); ?> <br> <?php print t('YOUR TRANSPORT'); ?></span>
+                <a href="tel:+59894893823"><img class="icon-wp" src="/sites/all/themes/go_city/images/whatsapp.svg"></a>
               </li>
               <li>
                 <a href="tel:+59894893823">(+598) 94 893 823</a>
@@ -98,7 +99,7 @@
 
           </div>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2">
           <?php if (!empty($page['language_select'])): ?>
             <?php print render($page['language_select']); ?>
           <?php endif; ?>
@@ -140,11 +141,9 @@
       </div>
     </div>
   </header>
-
   <?php if (!empty($page['hero_slider'])): ?>
   <?php print render($page['hero_slider']); ?>
   <?php endif; ?>
-
   <div class="main-container">
 
     <header role="banner" id="page-header">
@@ -155,7 +154,28 @@
     <div class="container">
       <?php print $messages; ?>
     </div>
-    <div class="section-services clearfix">
+
+    <div class="section-about clearfix" id="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="heading">
+              <?php if (!empty($page['about_us_heading'])): ?>
+              <?php print render($page['about_us_heading']); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <?php if (!empty($page['about_us_message'])): ?>
+            <?php print render($page['about_us_message']); ?>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-services clearfix" id="services">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -199,45 +219,30 @@
       </div>
     </div>
 
-    <div class="section-reservation clearfix">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="heading">
-              <?php if (!empty($page['reservation_heading'])): ?>
-              <?php print render($page['reservation_heading']); ?>
+    <div class="section-reservation clearfix" id="reservation">
+      <div class="filter">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="heading">
+                <?php if (!empty($page['reservation_heading'])): ?>
+                <?php print render($page['reservation_heading']); ?>
+                <?php endif; ?>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <?php if (!empty($page['reservation_form'])): ?>
+              <?php print render($page['reservation_form']); ?>
               <?php endif; ?>
             </div>
-          </div>
-          <div class="col-xs-12">
-            <?php if (!empty($page['reservation_form'])): ?>
-            <?php print render($page['reservation_form']); ?>
-            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section-about clearfix">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="heading">
-              <?php if (!empty($page['about_us_heading'])): ?>
-              <?php print render($page['about_us_heading']); ?>
-              <?php endif; ?>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <?php if (!empty($page['about_us_message'])): ?>
-            <?php print render($page['about_us_message']); ?>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="section-fleet clearfix">
+
+    <div class="section-fleet clearfix" id="fleet">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -266,19 +271,23 @@
       </div>
     </div>
 
-    <div class="section-contact clearfix">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="heading">
-              <?php if (!empty($page['contact_heading'])): ?>
-              <?php print render($page['contact_heading']); ?>
-              <?php endif; ?>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <?php if (!empty($page['contact_block'])): ?>
-              <?php print render($page['contact_block']); ?>
-              <?php endif; ?>
+
+
+    <div class="section-contact clearfix" id="contact">
+      <div class="filter">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="heading">
+                <?php if (!empty($page['contact_heading'])): ?>
+                <?php print render($page['contact_heading']); ?>
+                <?php endif; ?>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <?php if (!empty($page['contact_block'])): ?>
+                <?php print render($page['contact_block']); ?>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         </div>
@@ -301,3 +310,30 @@
         <?php print render($page['footer']); ?>
       </footer>
       <?php endif; ?>
+      <script>(function($){
+  $(document).on("ready", function () {
+      var urlHash = window.location.href.split("#")[1];
+      $('html,body').animate({
+          scrollTop: $('.' + urlHash + ', #' + urlHash +',[name='+urlHash+']').first().offset().top +1
+      }, 1250);
+  });
+ 
+})(jQuery);
+ 
+ 
+// =================================== SMOOTH SCROLLING LOCAL ANCHOR //
+(function($) {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top +1
+                }, 1250);
+                return false;
+              }
+            }
+        });
+})(jQuery);
+      </script>
