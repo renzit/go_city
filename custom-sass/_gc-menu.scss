@@ -1,0 +1,241 @@
+/*
+*   Custom Overrides
+*/
+
+$navbar-default-border: transparent;
+$navbar-default-color: #fff !default;
+$navbar-default-bg: #fff !default;
+a {
+    text-decoration: none;
+}
+
+.logo {
+    img {
+        width: 180px;
+    }
+}
+
+.region-language-select {
+    padding-top: 13px;
+    font-family: Roboto;
+}
+
+.navbar-toggle{
+    margin: 13px 0 0;
+}
+
+.language-icon {
+    position: absolute;
+    top: 31px;
+    left: 60px;
+    width: 16px;
+    height: 12px;
+    object-fit: cover;
+}
+
+.logged-in {
+    .language-icon {
+        top: 11px;
+        left: 44px;
+        width: 16px;
+        height: 12px;
+        object-fit: cover;
+    }
+}
+
+#lang-dropdown-select-language {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+// .navbar-toggle {
+//     margin: 19px 0 0;
+// }
+
+@media only screen and (min-width: $screen-sm-min+1) {
+    .navbar-default {
+        border-bottom: none;
+    }
+    #go-city-menu .nav:before {
+        border-left: 19px solid #ffffff;
+        border-right: 19px solid transparent;
+        border-top: 26px solid #ffffff;
+        border-bottom: 26px solid transparent;
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: -1px;
+    }
+    #go-city-menu li {
+        padding-right: 0;
+    }
+    #go-city-menu {
+        .navbar-right {
+            border-radius: 0 4px 0 0;
+            background: #005792;
+            position: relative;
+            padding-left: 38px;
+            margin-top: 12px;
+            margin-right: -13px;
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 12px;
+                &:first-child:before {
+                    border-left: 21px solid transparent;
+                    border-right: 19px solid #005792;
+                    border-top: 25px solid transparent;
+                    border-bottom: 25px solid #005792;
+                    content: "";
+                    position: absolute;
+                    left: -38px;
+                    top: 0;
+                }
+                &:first-child:hover:before {
+                    border-left-color: transparent;
+                    border-right-color: #005792;
+                    border-top-color: transparent;
+                    border-bottom-color: #005792;
+                }
+                &:hover {
+                    background: #005792; 
+                    border-radius: 0 4px 0 0;
+                    a {
+                        color: #ffa530 !important;
+                    }
+                }
+                a {
+                    display: block;
+                    padding: 12px;
+                    color: #fff;
+                    outline: none;
+                    font-weight: 800;
+                    background-color: transparent;
+                    font-size: 13px;
+                    transition: color 0.4s linear;
+                    font-family: Nunito;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    .call-us {
+        float: right;
+        padding-top: 17px;
+        ul {
+            list-style-type: none;
+            line-height: 1.3;
+            li {
+                display: inline-block;
+                font-weight: bold;
+                padding: 0 1px;
+                vertical-align: top;
+                position: relative;
+                .phone-number {
+                    font-size: 14px;
+                    color: #2c3740;
+                    line-height: 2.2;
+                    font-family: Roboto;
+                }
+            }
+            li:first-child:after {
+                content: "";
+                background: #d5dce4;
+                display: block;
+                position: absolute;
+                right: -15px;
+                top: 0;
+                width: 1px;
+                height: 30px;
+            }
+            li:last-child {
+                padding-left: 25px;
+            }
+        }
+        img {
+            margin-right: 12px;
+            vertical-align: top;
+            float: left;
+        }
+        .icon-wp {
+            width: 28px;
+            margin: 0 10px;
+        }
+        .transport {
+            float: left;
+            font-weight: bold;
+            font-size: 10px;
+            font-family: Roboto;
+            color: #2c3740;
+        }
+    }
+    .region-language-select {
+        padding-top: 12px;
+    }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+    .logo {
+        img {
+            width: 280px;
+        }
+    }
+    .call-us ul li .phone-number{
+        line-height: 1.4;
+        font-size: 20px;
+    }
+    .call-us .transport{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .logo {
+        img {
+            padding: 0.5rem 0;
+            float: left;
+        }
+    }
+    .item-menu-mobile {
+        width: auto;
+        float: right;
+        padding-left: 0;
+    }
+    .item-language-select {
+        width: auto;
+        float: right;
+    }
+    .call-us {
+        display: none;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form,
+    #navbar {
+        padding: 0;
+    }
+    .navbar-header {
+        padding-left: 15px;
+        padding-right: 15px;
+        background: #FFF;
+        box-shadow: 0 0 16px rgba(0, 0, 0, .15);
+    }
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover,
+    .navbar-default .navbar-nav>.active>a:focus {
+        color: #555;
+        background-color: white;
+    }
+    .nav>li {
+        text-align: center;
+        font-size: 18px;
+        background-color: white;
+        border-bottom: 1px solid #eee;
+    }
+    .navbar-nav {
+        margin: 7.5px 0px 0;
+    }
+}

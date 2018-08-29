@@ -83,23 +83,33 @@
         </a>
           <?php endif; ?>
         </div>
-        <div class="col-xs-6 hidden-xs">
+        <div class="col-lg-7 col-sm-6 hidden-xs">
           <div class="call-us">
-            <ul>
-              <li>
-                <img class="icon-cellphone" src="/sites/all/themes/go_city/images/phone.png" alt="">
-                <span class="transport"><?php print t('CALL US NOW FOR'); ?> <br> <?php print t('YOUR TRANSPORT'); ?></span>
-                <a href="tel:+59894893823"><img class="icon-wp" src="/sites/all/themes/go_city/images/whatsapp.svg"></a>
-              </li>
-              <li>
-                <a href="tel:+59894893823">(+598) 94 893 823</a>
-              </li>
+            <a href="tel:+59894893823">
+              <ul>
+                <li>
+                  <img class="icon-wp" src="/sites/all/themes/go_city/images/whatsapp.svg">
+                  <span class="transport"><?php print t('CALL US NOW'); ?> <br> <?php print t('FOR YOUR TRANSPORT'); ?></span>
+                </li>
+                <li>
+                  <span class="phone-number">(+598) 94 893 823</span>
+                </li>
 
-            </ul>
-
+              </ul>
+            </a>
           </div>
         </div>
-        <div class="col-xs-2">
+        <div class="col-xs-3 col-sm-2 col-md-1 item-menu-mobile">
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <?php endif; ?>
+        </div>
+        <div class="col-xs-3 col-sm-1 col-md-2 col-lg-1 item-language-select">
           <?php if (!empty($page['language_select'])): ?>
             <?php print render($page['language_select']); ?>
           <?php endif; ?>
@@ -113,14 +123,7 @@
           </a>
           <?php endif; ?>
 
-          <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <?php endif; ?>
+
         </div>
 
         <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
